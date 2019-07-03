@@ -51,7 +51,13 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
+  CheckpointMsg.msg
   ControlMsg.msg
+  GoalMsg.msg
+  ObjectMsg.msg
+  ObjectStateMsg.msg
+  PositionMsg.msg
+  StateMsg.msg
   TransmissionMsg.msg
 )
 

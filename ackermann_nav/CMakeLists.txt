@@ -202,35 +202,35 @@ include_directories(
 # catkin_add_nosetests(test)
 
 # ackermann steering node
-add_executable(ackermann_teleop src/ackermann_teleop_original.cpp)
+add_executable(ackermann_teleop src/templates/ackermann_teleop_original.cpp)
 target_link_libraries(ackermann_teleop ${catkin_LIBRARIES})
 
 # talker node
-add_executable(talker src/talker.cpp)
+add_executable(talker src/templates/talker.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
 
 # talker_2 node
-add_executable(talker_2 src/talker_2.cpp)
+add_executable(talker_2 src/templates/talker_2.cpp)
 target_link_libraries(talker_2 ${catkin_LIBRARIES})
 
 # talker_3 node
-add_executable(talker_3 src/talker_3.cpp)
+add_executable(talker_3 src/templates/talker_3.cpp)
 target_link_libraries(talker_3 ${catkin_LIBRARIES})
 
 # copy cat node, subscribes to talker and publishes data to new topic
-add_executable(copy_cat src/copy_cat.cpp)
+add_executable(copy_cat src/templates/copy_cat.cpp)
 target_link_libraries(copy_cat ${catkin_LIBRARIES})
 
 # copy_cat_2 node, subscribes to talker, talker_2 
-add_executable(copy_cat_2 src/copy_cat_2.cpp)
+add_executable(copy_cat_2 src/templates/copy_cat_2.cpp)
 target_link_libraries(copy_cat_2 ${catkin_LIBRARIES})
 
 # copy_cat_2_pub node, subscribes to talker, talker_2 and publishes to new topic
-add_executable(copy_cat_2_pub src/copy_cat_2_pub.cpp)
+add_executable(copy_cat_2_pub src/templates/copy_cat_2_pub.cpp)
 target_link_libraries(copy_cat_2_pub ${catkin_LIBRARIES})
 
 # copy_cat_3_pub2 node, subscribes to talker, talker_2, talker_3 and publishes to new topic
-add_executable(copy_cat_3_pub2 src/copy_cat_3_pub2.cpp)
+add_executable(copy_cat_3_pub2 src/templates/copy_cat_3_pub2.cpp)
 target_link_libraries(copy_cat_3_pub2 ${catkin_LIBRARIES})
 
 

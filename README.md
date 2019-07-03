@@ -1,8 +1,8 @@
 # ackermann_nav-ROS
 
-This repository stores the files and setup documents for running the ackermann_nav package in ROS. This package provides a framework for experimenting with and testing algorithms for four wheeled autonomous vehicles. 
+This repository stores the files and setup documents for running the ackermann_nav package in ROS. This package to provides a framework for experimenting with and testing algorithms for four wheeled autonomous vehicles. 
 
-The aim is to make a more user-friendly ROS environment so users can implement higher level concepts more easily. Documentation is also provided explaining the inner workings of the package with the hope that users can adjust it to their specific use case. 
+The intention is to make a more user-friendly ROS environment so users can implement higher level concepts more easily. Documentation is provided explaining the inner workings of the package with the hope that users can more easily adjust it to their specific use case. 
 
 All design documents are located in the README folder within the ackermann_nav package. 
 

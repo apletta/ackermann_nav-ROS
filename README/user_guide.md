@@ -25,3 +25,5 @@ You should see some output for a second or two in the terminal where you execute
 You should see the following:
 ![rqt_graph](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/templates_example_rqt_graph.png)
 
+
+You can also check the nodes and topics using `rostopic list` and `rosnode list`, and additionally get info on each topic and/or node by using `rostopic info <topic>` and `rosnode info <node name>`. Note that topics with no subscribers (i.e. /published_from_sub1_pub1, /published_from_sub3_pub2, /published_from_sub3_pub2_2) don't appear in the rqt_graph. Rqt_graph is generally a good way of visualizing the nodes and connecting topics all at once. 

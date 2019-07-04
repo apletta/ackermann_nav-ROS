@@ -1,3 +1,5 @@
+#USAGE parameter: value # comment (note that you cannot use tabs, use spaces instead)
+
 racecar:
   joint_state_controller:
     type: joint_state_controller/JointStateController

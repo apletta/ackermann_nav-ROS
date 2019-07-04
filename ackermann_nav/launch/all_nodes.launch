@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <!-- load parameters -->
+  <rosparam file="$(find ackermann_nav)/param/ackermann_teleop_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/controller_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/current_state_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/global_map_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/global_plan_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/local_plan_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/obstacle_locations_param.yaml" command="load" />
+  <rosparam file="$(find ackermann_nav)/param/vehicle_param.yaml" command="load" />
+
+  <!-- launch nodes -->
+  <node name="ackermann_controller" pkg="ackermann_nav" type="ackermann_controller" output="screen" />
+  <node name="ackermann_odom" pkg="ackermann_nav" type="ackermann_odom" output="screen" />
+  <node name="ackermann_teleop" pkg="ackermann_nav" type="ackermann_teleop" output="screen" />
+  <node name="current_state" pkg="ackermann_nav" type="current_state" output="screen" />
+  <node name="global_map" pkg="ackermann_nav" type="global_map" output="screen" />
+  <node name="global_plan" pkg="ackermann_nav" type="global_plan" output="screen" />
+  <node name="local_plan" pkg="ackermann_nav" type="local_plan" output="screen" />
+  <node name="obstacle_locations" pkg="ackermann_nav" type="obstacle_locations" output="screen" />
+
+
+</launch>
+

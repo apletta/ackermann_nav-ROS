@@ -23,13 +23,13 @@ using namespace std;
 int main(int argc, char **argv)
 {
   //intialize ROS and set node name, should generally be file name
-  ros::init(argc, argv, "pub1_3");
+  ros::init(argc, argv, "ackermann_teleop");
 
   //create ROS object to access communication operations
   ros::NodeHandle n;
 
   //create Publisher object and set topic to publish to and queue size for published messages
-  ros::Publisher pub_1 = n.advertise<myControlMsg>("published_from_pub1_3", 1000);
+  ros::Publisher pub_1 = n.advertise<myControlMsg>("control_teleop", 1000);
 
   //set publish rate, in Hz
   ros::Rate loop_rate(10); 

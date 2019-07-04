@@ -207,6 +207,40 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+# ackermann_controller node 
+add_executable(ackermann_controller src/nodes/ackermann_controller.cpp)
+target_link_libraries(ackermann_controller ${catkin_LIBRARIES})
+
+# ackermann_odom node 
+add_executable(ackermann_odom src/nodes/ackermann_odom.cpp)
+target_link_libraries(ackermann_odom ${catkin_LIBRARIES})
+
+# ackermann_teleop node 
+add_executable(ackermann_teleop src/nodes/ackermann_teleop.cpp)
+target_link_libraries(ackermann_teleop ${catkin_LIBRARIES})
+
+# current_state node 
+add_executable(current_state src/nodes/current_state.cpp)
+target_link_libraries(current_state ${catkin_LIBRARIES})
+
+# global_map node 
+add_executable(global_map src/nodes/global_map.cpp)
+target_link_libraries(global_map ${catkin_LIBRARIES})
+
+# global_plan node 
+add_executable(global_plan src/nodes/global_plan.cpp)
+target_link_libraries(global_plan ${catkin_LIBRARIES})
+
+# local_plan node 
+add_executable(local_plan src/nodes/local_plan.cpp)
+target_link_libraries(local_plan ${catkin_LIBRARIES})
+
+# obstacle_locations node 
+add_executable(obstacle_locations src/nodes/obstacle_locations.cpp)
+target_link_libraries(obstacle_locations ${catkin_LIBRARIES})
+
+
+
 # pub1 node, publishes to single topic 
 add_executable(pub1 src/templates/pub1.cpp)
 target_link_libraries(pub1 ${catkin_LIBRARIES})
@@ -228,8 +262,8 @@ add_executable(sub3_pub2 src/templates/sub3_pub2.cpp)
 target_link_libraries(sub3_pub2 ${catkin_LIBRARIES})
 
 # ackermann steering node
-add_executable(ackermann_teleop src/templates/ackermann_teleop_original.cpp)
-target_link_libraries(ackermann_teleop ${catkin_LIBRARIES})
+add_executable(ackermann_teleop_original src/templates/ackermann_teleop_original.cpp)
+target_link_libraries(ackermann_teleop_original ${catkin_LIBRARIES})
 
 # copy cat node, subscribes to talker and publishes data to new topic
 add_executable(copy_cat src/templates/copy_cat.cpp)

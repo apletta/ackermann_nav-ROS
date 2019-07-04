@@ -1,0 +1,17 @@
+#USAGE parameter: value # comment (note that you cannot use tabs, use spaces instead)
+
+# Physical vehicle
+vehicle_length: 1.2     # length between front/rear wheel centers
+vehicle_width: 0.8      # width between left/right wheel centers
+wheel_radius: 0.235227  # radius of wheels
+
+# Control 
+num_a: 3     # number of acceleration change inputs, must be odd number so zero can be an option
+min_a: -1.0  # lowest acceleration vehicle is capable of, essentially braking/deceleration
+max_a: 1.0   # highest acceleration vehicle is capable of, essentially how fast motor can speed up vehicle
+
+num_h: 3     # number of heading change inputs, must be odd number so zero can be an option
+max_h: 60    # max steering angle in degrees
+
+v_min: -1.0  # lowest velocity desired, making negative will allow for driving in reverse
+v_max: 1.0   # highest velocity desired

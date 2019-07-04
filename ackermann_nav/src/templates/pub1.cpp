@@ -29,7 +29,7 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
 
   //create Publisher object and set topic to publish to and queue size for published messages
-  ros::Publisher chatter_pub = n.advertise<myControlMsg>("published_from_pub1", 1000);
+  ros::Publisher pub_1 = n.advertise<myControlMsg>("published_from_pub1", 1000);
 
   //set publish rate, in Hz
   ros::Rate loop_rate(10); 
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
   while (ros::ok())
   {
     //create message object to get filled with data and then published
-    myControlMsg msg;
+    myControlMsg output;
        
     /*
 
@@ -58,12 +58,12 @@ int main(int argc, char **argv)
 
 
     //fill message data fields 
-    msg.header.stamp = ros::Time::now();  //this line likely won't change
-    msg.vel_k_in = count;  //this line can be set to your variable
-    msg.head_k_in = count;  //this line can be set to your variable
+    output.header.stamp = ros::Time::now();  //this line likely won't change
+    output.vel_k_in = count;  //this line can be set to your variable
+    output.head_k_in = count;  //this line can be set to your variable
 
     //publish message object, type to publish must agree with declared publish type of publish object
-    chatter_pub.publish(msg);
+    pub_1.publish(output);
 
     //trigger any callbacks
     ros::spinOnce();

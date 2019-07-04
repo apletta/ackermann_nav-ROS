@@ -1,12 +1,14 @@
 # User Guide
 ### Describes how to use the ackermann_nav package. You should read this, or at least skim, before using so you know how to use and change this package. It is intended to save you time and frustration for later as there are lots of practices to follow so things compile and work together properly. 
 
-1. Launch files: What each does, commands to run them, things to note within the files
-2. Package structure: What's in what folders, how files are organized, and generally called by each other
-3. Param files: Format, how to use, how to load into a node
-4. Messages: Format, how to adjust, how to make your own
-5. Topics: Format, how to adjust, how to make your own
-6. Nodes: Where to put algorithm code, how to adjust publisher/subscriber topics
+## Table of contents
+1. Intro: What this package is intended to do and how to get started using it
+2. Launch files: What each does, commands to run them, things to note within the files
+3. Package structure: What's in what folders, how files are organized, and generally called by each other
+4. Param files: Format, how to use, how to load into a node
+5. Messages: Format, how to adjust, how to make your own
+6. Topics: Format, how to adjust, how to make your own
+7. Nodes: Where to put algorithm code, how to adjust publisher/subscriber topics
 
 ## Intro
 
@@ -18,7 +20,7 @@ When you execute the launch file, you should see some output for a second or two
 After launching nodes, it is generally a good idea to confirm that they are running and communicating over topics as you expect them to. You can check the topics and nodes using `rostopic list` and `rosnode list`, and additionally get info on each topic and/or node by using `rostopic info <topic>` and `rosnode info <node name>`. 
 - A good way of visualizing everything is look at the rqt_graph by using `rosrun rqt_graph rqt_graph`. Nodes are in boxes, topics in ovals. Note that topics with no subscribers don't appear in the rqt_graph, so for those you'll have to check the topics manually as described above or via some other method. 
 
-#### templates_example.launch
+### templates_example.launch
 To launch the template nodes, run the following command. 
 
 `$ roslaunch ackermann_nav templates_example.launch`
@@ -31,7 +33,7 @@ You should see the following:
 ![rqt_graph_templates_example](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/templates_example_rqt_graph.png)
 
 
-#### all_nodes.launch
+### all_nodes.launch
 To launch all package nodes, run the following command.
 `$ roslaunch ackermann_nav all_nodes.launch`
 

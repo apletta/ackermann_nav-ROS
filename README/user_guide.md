@@ -2,7 +2,8 @@
 ### Describes how to use the ackermann_nav package. You should read this, or at least skim, before using so you know how to use and change this package. It is intended to save you time and frustration for later as there are lots of practices to follow so things compile and work together properly. 
 
 ## Table of contents
-1. Intro: What this package is intended to do and how to get started using it
+[Intro](#intro) 
+- What this package is intended to do and how to get started using it
 2. Launch files: What each does, commands to run them, things to note within the files
 3. Package structure: What's in what folders, how files are organized, and generally called by each other
 4. Param files: Format, how to use, how to load into a node

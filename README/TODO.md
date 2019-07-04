@@ -6,4 +6,3 @@
   - .msg files
   - include statements
   - message types within nodes
-- make sure position subscribed variables are read in as x_k and y_k, not just x and y

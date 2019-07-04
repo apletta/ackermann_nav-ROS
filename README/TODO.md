@@ -7,3 +7,5 @@
   - .msg files
   - include statements
   - message types within nodes
+- read parameters into nodes
+  - parameters into namespaces for their node so they don't get overwritten in case other param files use the same parameter names

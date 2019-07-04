@@ -23,4 +23,5 @@ You should see some output for a second or two in the terminal where you execute
 `$ rosrun rqt_graph rqt_graph`
 
 You should see the following:
-![rqt_graph](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![rqt_graph](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/templates_example_rqt_graph.png)
+

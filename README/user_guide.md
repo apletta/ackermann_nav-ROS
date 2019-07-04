@@ -13,17 +13,33 @@
 ## Launch files
 The "Launch" folder contains all of the package launch files. Launch files allow you to load parameters, run nodes, call other launch files, and more from a single file. You can always run the nodes individually from a single terminal by using the `$ rosrun <package> <node executable name>` command but the launch files make it so you don't need to open say 6 terminals to run 6 nodes.
 
+When you execute the launch file, you should see some output for a second or two in the terminal where you executed the launch command. This tells you what the launch file is doing (ex. what parameters are being loaded, what nodes are being launched, etc.).
+
+After launching nodes, it is generally a good idea to confirm that they are running and communicating over topics as you expect them to. You can check the topics and nodes using `rostopic list` and `rosnode list`, and additionally get info on each topic and/or node by using `rostopic info <topic>` and `rosnode info <node name>`. 
+- A good way of visualizing everything is look at the rqt_graph by using `rosrun rqt_graph rqt_graph`. Nodes are in boxes, topics in ovals. Note that topics with no subscribers don't appear in the rqt_graph, so for those you'll have to check the topics manually as described above or via some other method. 
+
 #### templates_example.launch
 To launch the template nodes, run the following command. 
 
 `$ roslaunch ackermann_nav templates_example.launch`
 
-You should see some output for a second or two in the terminal where you executed the launch command. To verify the node structure, open a new terminal and check the rqt_graph.
+To verify the node structure, open a new terminal and check the rqt_graph.
 
 `$ rosrun rqt_graph rqt_graph`
 
 You should see the following:
-![rqt_graph](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/templates_example_rqt_graph.png)
+![rqt_graph_templates_example](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/templates_example_rqt_graph.png)
 
 
-You can also check the nodes and topics using `rostopic list` and `rosnode list`, and additionally get info on each topic and/or node by using `rostopic info <topic>` and `rosnode info <node name>`. Note that topics with no subscribers (i.e. /published_from_sub1_pub1, /published_from_sub3_pub2, /published_from_sub3_pub2_2) don't appear in the rqt_graph. Rqt_graph is generally a good way of visualizing the nodes and connecting topics all at once. 
+#### all_nodes.launch
+To launch all package nodes, run the following command.
+`$ roslaunch ackermann_nav all_nodes.launch`
+
+ To verify the node structure, open a new terminal and check the rqt_graph.
+
+`$ rosrun rqt_graph rqt_graph`
+
+You should see the following:
+![rqt_graph_all_nodes](https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/all_nodes_rqt_graph.png)
+
+

@@ -1,0 +1,78 @@
+//general include statements
+#include <ros/ros.h>
+
+//ackermann_nav message include statements
+#include <ackermann_nav/CheckpointMsg.h>
+#include <ackermann_nav/ControlMsg.h>
+#include <ackermann_nav/GoalMsg.h>
+#include <ackermann_nav/ObjectMsg.h>
+#include <ackermann_nav/ObjectStateMsg.h>
+#include <ackermann_nav/PositionMsg.h>
+#include <ackermann_nav/StateMsg.h>
+#include <ackermann_nav/TransmissionMsg.h>
+
+//define messages as shorter and easier to read variables, one line per message type to be used by node
+typedef ackermann_nav::ControlMsg myControlMsg;
+
+//namespaces
+using namespace std;
+
+
+
+//main function that runs while node is active, NOT a while loop unless you include one
+int main(int argc, char **argv)
+{
+  //intialize ROS and set node name, should generally be file name
+  ros::init(argc, argv, "pub1_2");
+
+  //create ROS object to access communication operations
+  ros::NodeHandle n;
+
+  //create Publisher object and set topic to publish to and queue size for published messages
+  ros::Publisher chatter_pub = n.advertise<myControlMsg>("published_from_pub1_2", 1000);
+
+  //set publish rate, in Hz
+  ros::Rate loop_rate(10); 
+
+  double count = 0; //counter for running through while loop, used for example
+  //while loop that runs while node is active
+  while (ros::ok())
+  {
+    //create message object to get filled with data and then published
+    myControlMsg msg;
+       
+    /*
+
+
+
+
+
+      ALGORITHM CODE GOES HERE
+
+
+
+
+
+  
+    */
+
+
+    //fill message data fields 
+    msg.header.stamp = ros::Time::now();  //this line likely won't change
+    msg.vel_k_in = count;  //this line can be set to your variable
+    msg.head_k_in = count;  //this line can be set to your variable
+
+    //publish message object, type to publish must agree with declared publish type of publish object
+    chatter_pub.publish(msg);
+
+    //trigger any callbacks
+    ros::spinOnce();
+
+    //pause as long as needed to meet publish rate
+    loop_rate.sleep();
+
+    ++count;  //increment our example counter
+  }
+
+  return 0;
+}

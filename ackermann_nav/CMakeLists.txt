@@ -207,21 +207,29 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+# pub1 node, publishes to single topic 
+add_executable(pub1 src/templates/pub1.cpp)
+target_link_libraries(pub1 ${catkin_LIBRARIES})
+
+# pub1_2 node, publishes to single topic 
+add_executable(pub1_2 src/templates/pub1_2.cpp)
+target_link_libraries(pub1_2 ${catkin_LIBRARIES})
+
+# pub1_3 node, publishes to single topic 
+add_executable(pub1_3 src/templates/pub1_3.cpp)
+target_link_libraries(pub1_3 ${catkin_LIBRARIES})
+
+# sub1_pub1 node, subscribes to one topic and publishes to one topic  
+add_executable(sub1_pub1 src/templates/sub1_pub1.cpp)
+target_link_libraries(sub1_pub1 ${catkin_LIBRARIES})
+
+# sub3_pub2 node, subscribes to three topics and publishes to two topics  
+add_executable(sub3_pub2 src/templates/sub3_pub2.cpp)
+target_link_libraries(sub3_pub2 ${catkin_LIBRARIES})
+
 # ackermann steering node
 add_executable(ackermann_teleop src/templates/ackermann_teleop_original.cpp)
 target_link_libraries(ackermann_teleop ${catkin_LIBRARIES})
-
-# talker node
-add_executable(talker src/templates/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-
-# talker_2 node
-add_executable(talker_2 src/templates/talker_2.cpp)
-target_link_libraries(talker_2 ${catkin_LIBRARIES})
-
-# talker_3 node
-add_executable(talker_3 src/templates/talker_3.cpp)
-target_link_libraries(talker_3 ${catkin_LIBRARIES})
 
 # copy cat node, subscribes to talker and publishes data to new topic
 add_executable(copy_cat src/templates/copy_cat.cpp)
@@ -238,5 +246,20 @@ target_link_libraries(copy_cat_2_pub ${catkin_LIBRARIES})
 # copy_cat_3_pub2 node, subscribes to talker, talker_2, talker_3 and publishes to new topic
 add_executable(copy_cat_3_pub2 src/templates/copy_cat_3_pub2.cpp)
 target_link_libraries(copy_cat_3_pub2 ${catkin_LIBRARIES})
+
+# talker node
+add_executable(talker src/templates/talker.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+
+# talker_2 node
+add_executable(talker_2 src/templates/talker_2.cpp)
+target_link_libraries(talker_2 ${catkin_LIBRARIES})
+
+# talker_3 node
+add_executable(talker_3 src/templates/talker_3.cpp)
+target_link_libraries(talker_3 ${catkin_LIBRARIES})
+
+
+
 
 

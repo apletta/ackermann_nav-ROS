@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node name="pub1" pkg="ackermann_nav" type="pub1" respawn="false" output="screen" />
+  <node name="pub1_2" pkg="ackermann_nav" type="pub1_2" respawn="false" output="screen" />
+  <node name="pub1_3" pkg="ackermann_nav" type="pub1_3" respawn="false" output="screen" />
+
+  <node name="sub1_pub1" pkg="ackermann_nav" type="sub1_pub1" respawn="false" output="screen" />
+  <node name="sub3_pub2" pkg="ackermann_nav" type="sub3_pub2" respawn="false" output="screen" />
+
+
+</launch>
+

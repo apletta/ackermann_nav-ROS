@@ -2,19 +2,17 @@
 ### Describes how to use the ackermann_nav package. You should read this, or at least skim, before using so you know how to use and change this package. It is intended to save you time and frustration for later as there are lots of practices to follow so things compile and work together properly. 
 
 ## Table of contents
-[Intro](#intro) : What this package is intended to do and how to get started using it
-
-[Launch files](#launch files) : What each does, commands to run them, things to note within the files
-
+1. Intro: What this package is intended to do and how to get started using it
+2. Launch files: What each does, commands to run them, things to note within the files
 3. Package structure: What's in what folders, how files are organized, and generally called by each other
 4. Param files: Format, how to use, how to load into a node
 5. Messages: Format, how to adjust, how to make your own
 6. Topics: Format, how to adjust, how to make your own
 7. Nodes: Where to put algorithm code, how to adjust publisher/subscriber topics
 
-## Intro
+## 1. Intro
 
-## Launch files
+## 2. Launch files
 The "Launch" folder contains all of the package launch files. Launch files allow you to load parameters, run nodes, call other launch files, and more from a single file. You can always run the nodes individually from a single terminal by using the `$ rosrun <package> <node executable name>` command but the launch files make it so you don't need to open say 6 terminals to run 6 nodes.
 
 When you execute the launch file, you should see some output for a second or two in the terminal where you executed the launch command. This tells you what the launch file is doing (ex. what parameters are being loaded, what nodes are being launched, etc.).

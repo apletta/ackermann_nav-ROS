@@ -10,3 +10,17 @@
 
 ## Intro
 
+## Launch files
+The "Launch" folder contains all of the package launch files. Launch files allow you to load parameters, run nodes, call other launch files, and more from a single file. You can always run the nodes individually from a single terminal by using the `$ rosrun <package> <node executable name>` command but the launch files make it so you don't need to open say 6 terminals to run 6 nodes.
+
+#### templates_example.launch
+To launch the template nodes, run the following command. 
+
+`$ roslaunch ackermann_nav templates_example.launch`
+
+You should see some output for a second or two in the terminal where you executed the launch command. To verify the node structure, open a new terminal and check the rqt_graph.
+
+`$ rosrun rqt_graph rqt_graph`
+
+You should see the following:
+![rqt_graph](https://raw.github.com/username/projectname/branch/path/to/img.png)

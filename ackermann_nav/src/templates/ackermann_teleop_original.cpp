@@ -83,7 +83,7 @@ int main(int argc, char **argv)
   vel_control = 0.0;
 
   n.param<double>("steer_step", steer_step, 0.1);
-  n.param<double>("vel_step", vel_step, 0.1);
+  n.param<double>("vel_step", vel_step, 1.0);
   n.param<double>("length", length, 1.2);
   n.param<double>("width", width, 0.8);
 

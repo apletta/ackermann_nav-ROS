@@ -261,7 +261,7 @@ target_link_libraries(sub1_pub1 ${catkin_LIBRARIES})
 add_executable(sub3_pub2 src/templates/sub3_pub2.cpp)
 target_link_libraries(sub3_pub2 ${catkin_LIBRARIES})
 
-# ackermann steering node
+# original ackermann steering node
 add_executable(ackermann_teleop_original src/templates/ackermann_teleop_original.cpp)
 target_link_libraries(ackermann_teleop_original ${catkin_LIBRARIES})
 

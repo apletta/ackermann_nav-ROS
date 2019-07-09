@@ -107,6 +107,7 @@ int main(int argc, char **argv)
     right_wheel_angle = wheel_angles[2];
 
     cout << left_wheel_angle << " " << steer_control << " " << right_wheel_angle << endl;
+    cout << vel_control << endl;
 
     left_wheel_msg.data = left_wheel_angle;
     right_wheel_msg.data = right_wheel_angle; 

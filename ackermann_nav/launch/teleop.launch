@@ -3,7 +3,7 @@
 
   <rosparam file="$(find ackermann_nav)/param/ackermann_teleop_param.yaml" command="load" />
 
-  <node name="ackermann_teleop" pkg="ackermann_nav" type="ackermann_teleop" output="screen"/>
+  <node name="ackermann_teleop_original" pkg="ackermann_nav" type="ackermann_teleop_original" output="screen"/>
 
 </launch>
 

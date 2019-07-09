@@ -12,20 +12,20 @@
     <arg name="debug" value="false"/>
   </include>
 
-  <param name="robot_description" command="cat '$(find ackermann_nav)/urdf/ackermann.xacro' "/>
+  <param name="robot_description" command="cat '$(find ackermann_nav)/urdf/ackermann_hokuyo.xacro' "/>
 
   <arg name="init_x" default="0" />
   <arg name="init_y" default="0" />
   <arg name="init_z" default="0.5" />
 
-  <node name="racecar_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model racecar -x $(arg init_x) -y $(arg init_y) -z $(arg init_z)" />
+  <node name="ackermann_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model ackermann -x $(arg init_x) -y $(arg init_y) -z $(arg init_z)" />
 
   <rosparam file="$(find ackermann_nav)/param/controller_param.yaml" command="load" />
 
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" ns="/racecar" args="left_rear_wheel_joint_controller right_rear_wheel_joint_controller left_steer_block_controller right_steer_block_controller joint_state_controller --shutdown-timeout 3" />
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" ns="/ackermann" args="left_rear_wheel_joint_controller right_rear_wheel_joint_controller left_steer_block_controller right_steer_block_controller joint_state_controller --shutdown-timeout 3" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen" >
-    <remap from="/joint_states" to="/racecar/joint_states" />
+    <remap from="/joint_states" to="/ackermann/joint_states" />
   </node>
 
 </launch>

@@ -45,7 +45,7 @@ int main(int argc, char **argv)
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
    */
-  ros::init(argc, argv, "ackermann_teleop");
+  ros::init(argc, argv, "ackermann_teleop_original");
 
   /**
    * NodeHandle is the main access point to communications with the ROS system.
@@ -71,10 +71,10 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher left_steer_block_publisher = n.advertise<std_msgs::Float64>("/racecar/left_steer_block_controller/command", 1000);
-  ros::Publisher right_steer_block_publisher = n.advertise<std_msgs::Float64>("/racecar/right_steer_block_controller/command", 1000);
-  ros::Publisher left_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/racecar/left_rear_wheel_joint_controller/command", 1000);
-  ros::Publisher right_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/racecar/right_rear_wheel_joint_controller/command", 1000);
+  ros::Publisher left_steer_block_publisher = n.advertise<std_msgs::Float64>("/ackermann/left_steer_block_controller/command", 1000);
+  ros::Publisher right_steer_block_publisher = n.advertise<std_msgs::Float64>("/ackermann/right_steer_block_controller/command", 1000);
+  ros::Publisher left_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/ackermann/left_rear_wheel_joint_controller/command", 1000);
+  ros::Publisher right_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/ackermann/right_rear_wheel_joint_controller/command", 1000);
 
   ros::Rate loop_rate(10);
 

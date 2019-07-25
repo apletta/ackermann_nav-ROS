@@ -11,3 +11,4 @@
   - put parameters into namespaces for their node so they don't get overwritten in case other param files use the same parameter names
 - change output of local planner from velocity to acceleration to simplify control commands (want controller to only apply changes, not calculate as it has no state information) **ackermann_nav_structure shows this but NOT in code yet** 
 - add heading field to goal message type **ackermann_nav_structure shows this but NOT in code yet**
+- change float_64 (double) to float_32 (float) for faster execution and still good enough accuracy

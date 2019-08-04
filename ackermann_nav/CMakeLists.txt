@@ -211,6 +211,10 @@ include_directories(
 add_executable(ackermann_controller src/nodes/ackermann_controller.cpp)
 target_link_libraries(ackermann_controller ${catkin_LIBRARIES})
 
+# ackermann_gazebo_driver node 
+add_executable(ackermann_gazebo_driver src/nodes/ackermann_gazebo_driver.cpp)
+target_link_libraries(ackermann_gazebo_driver ${catkin_LIBRARIES})
+
 # ackermann_odom node 
 add_executable(ackermann_odom src/nodes/ackermann_odom.cpp)
 target_link_libraries(ackermann_odom ${catkin_LIBRARIES})
@@ -261,9 +265,9 @@ target_link_libraries(sub1_pub1 ${catkin_LIBRARIES})
 add_executable(sub3_pub2 src/templates/sub3_pub2.cpp)
 target_link_libraries(sub3_pub2 ${catkin_LIBRARIES})
 
-# original ackermann steering node
-add_executable(ackermann_teleop_original src/templates/ackermann_teleop_original.cpp)
-target_link_libraries(ackermann_teleop_original ${catkin_LIBRARIES})
+# example ackermann steering node
+add_executable(ackermann_teleop_example src/templates/ackermann_teleop_example.cpp)
+target_link_libraries(ackermann_teleop_example ${catkin_LIBRARIES})
 
 # copy cat node, subscribes to talker and publishes data to new topic
 add_executable(copy_cat src/templates/copy_cat.cpp)

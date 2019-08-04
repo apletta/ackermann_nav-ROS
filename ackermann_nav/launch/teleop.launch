@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
+  <!-- load parameters -->
   <rosparam file="$(find ackermann_nav)/param/ackermann_teleop_param.yaml" command="load" />
 
-  <node name="ackermann_teleop_original" pkg="ackermann_nav" type="ackermann_teleop_original" output="screen"/>
+  <!-- launch nodes -->
+  <node name="ackermann_teleop" pkg="ackermann_nav" type="ackermann_teleop" output="screen" required="true" />
+  <node name="ackermann_controller" pkg="ackermann_nav" type="ackermann_controller" output="screen" required="true" />
+  <node name="ackermann_gazebo_driver" pkg="ackermann_nav" type="ackermann_gazebo_driver" output="screen" required="true" />
 
 </launch>
 

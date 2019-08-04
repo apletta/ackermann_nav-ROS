@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <rosparam file="$(find ackermann_nav)/param/ackermann_teleop_example_param.yaml" command="load" />
+
+  <node name="ackermann_teleop_example" pkg="ackermann_nav" type="ackermann_teleop_example" output="screen"/>
+
+</launch>
+

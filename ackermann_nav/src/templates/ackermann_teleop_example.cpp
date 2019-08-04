@@ -76,6 +76,7 @@ int main(int argc, char **argv)
   ros::Publisher left_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/ackermann/left_rear_wheel_joint_controller/command", 1000);
   ros::Publisher right_rear_wheel_publisher = n.advertise<std_msgs::Float64>("/ackermann/right_rear_wheel_joint_controller/command", 1000);
 
+
   ros::Rate loop_rate(10);
 
   // initialize control commands
@@ -187,7 +188,7 @@ void applySteer(double array[3], double curr, char input, double step){
   }
 
   // check if newVal is effectively zero
-  double straight_thresh = 0.00000001;  
+  double straight_thresh = 1e-6;  
   if(newVal>-straight_thresh && newVal <straight_thresh){
     newVal=0.0;
   }

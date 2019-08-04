@@ -1,0 +1,10 @@
+#USAGE parameter: value # comment (note that you cannot use tabs, use spaces instead)
+
+# Physical vehicle
+length: 1.2  # length between front/rear wheel centers
+width: 0.8   # width between left/right wheel centers
+
+# Input scale
+steer_step: 0.1  # amount of steering angle change for left/right input (rad)
+vel_step: 1.0    # amount of velocity change for forward/backward input (rad/s, for rear wheel spin velocity)
+

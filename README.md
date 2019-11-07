@@ -34,3 +34,15 @@ The current available simulation worlds are:
 3 - City
 
 <img src="https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/world_city_iso.png" alt="city simulation environment" width="60%">
+
+## Node structure
+
+Block diagram
+<img src="https://github.com/apletta/ackermann_nav-ROS/blob/master/README/ackermann_nav_structure.pdf" alt="block diagram" width="100%"> 
+
+ROS nodes
+<img src="https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/all_nodes_rtq_graph.png" alt="nodes" width="100%">
+
+Teleop active
+<img src="https://github.com/apletta/ackermann_nav-ROS/blob/master/README/pics/teleop.png" alt="teleop active nodes" width="100%">
+
